@@ -8,7 +8,7 @@ export class PushNotifController {
   @Get()
   findAll() {
     const deviceToken =
-      'f4gE18rIRWKVmUz-Ray4q9:APA91bF3A7Sz4S953PlHy3sZzg8EHkwjlMbl66ZoEtoBQebJBPX_zczfy8OfAm-A6VDvbZByTFQ1aB-WP38_qrvQP_OTUoMcQChW4VnevstdgLcxMPcEJIM';
+      'c_dg2HUGSkW5hvLgLErKn4:APA91bEDkjjze4v2eicz1oRaU6HC4AR3tlbfO8wrVZIzzDsgqljj8PvbJ14FZyBBp48ozn7OjbuTXQFL1woWOUe4EPUB81AdwSDAtHRiKT11plOAci-JVpU';
 
     const defaultNotif = {
       token: deviceToken,

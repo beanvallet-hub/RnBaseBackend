@@ -35,6 +35,8 @@ POST https://push-api.cloud.huawei.com/v3/YOUR_PROJECT_ID/messages:send
 
 token=DgEBAD/wDU/aG1/hXnelcNSsnFz8+aujXHjjjYLD2SDYpYU+5dDhAAiWjjOGFkSAYug8TT5k0rJ+aysYVWjn7C32rGREwJtGgwyYlg==
 
+device-token=IQAAAACy0jV9AACIn9aI1Jq6PG_CoCEa_kNCvOvKz0g3jTrf4HpicPGc-RdGDlD6hn1DdaCikgF1EuYX0zqNYJgyaGXOLmKPo9JsNin_YijL_3nPlA
+
 
 POST https://push-api.cloud.huawei.com/v3/736430079245800354/messages:send
 Authorization: Bearer DgEBAD/wDU/aG1/hXnelcNSsnFz8+aujXHjjjYLD2SDYpYU+5dDhAAiWjjOGFkSAYug8TT5k0rJ+aysYVWjn7C32rGREwJtGgwyYlg==
@@ -81,5 +83,28 @@ push-type: 0
   },
   "target": {
     "token": ["IQAAAACy0jV9AAB91E5Bw8SToh2YbTy4tyNSCTxCORHFeRnxbk1h9dwc7nxMf_XOJ1JQ_agWngj2qDagFBQuxjI3V9V86AoHqsmapf3WY-udNYisLA"]
+  }
+}
+
+
+
+POST https://push-api.cloud.huawei.com/v3/736430079245800354/messages:send
+Authorization: Bearer DgEBAJideSitKnfxSw4lBF6oo3uONrzF1djVPJiOVY9cEeXmnkTN2QgASViS+U6e4ZOvxlZaPxGTK1tGUcIpVkxdvD9bLFaMWzQWmw==
+Content-Type: application/json
+push-type: 0
+
+{
+  "payload": {
+    "notification": {
+      "category": "MARKETING", // Set it to the actual notification message type.
+      "title": "Hello AppC",
+      "body": "This message came from nest backend",
+      "clickAction": {
+        "actionType": 0
+      } 
+    }
+  },
+  "target": {
+    "token": ["IQAAAACy0jV9AACIn9aI1Jq6PG_CoCEa_kNCvOvKz0g3jTrf4HpicPGc-RdGDlD6hn1DdaCikgF1EuYX0zqNYJgyaGXOLmKPo9JsNin_YijL_3nPlA"]
   }
 }

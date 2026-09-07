@@ -7,7 +7,7 @@ import { AppModule } from './app.module';
 
 import { cert, initializeApp } from 'firebase-admin/app';
 
-const serviceAccount = require('../appc-7ce6a-firebase-adminsdk-fbsvc-11284811d0.json');
+const serviceAccount = require('../cloud-settings/appc-7ce6a-firebase-adminsdk-fbsvc-11284811d0.json');
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
