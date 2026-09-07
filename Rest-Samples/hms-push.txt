@@ -1,0 +1,85 @@
+POST https://oauth-login.cloud.huawei.com/oauth2/v3/token
+Content-Type: application/x-www-form-urlencoded
+
+
+grant_type=client_credentials
+&client_id=104443487
+&client_secret=9468c4a4c5e813059359665d81e4254258542fb66280b7a04d07f26d465c5a83
+
+
+
+
+POST https://push-api.cloud.huawei.com/v3/YOUR_PROJECT_ID/messages:send
+
+{
+  "validate_only": false,
+  "message": {
+    "notification": {
+      "title": "Hello",
+      "body": "This message came from my backend"
+    },
+    "android": {
+      "notification": {
+        "click_action": {
+          "type": 3
+        }
+      }
+    },
+    "token": [
+      "YOUR_DEVICE_PUSH_TOKEN"
+    ]
+  }
+}
+
+
+
+token=DgEBAD/wDU/aG1/hXnelcNSsnFz8+aujXHjjjYLD2SDYpYU+5dDhAAiWjjOGFkSAYug8TT5k0rJ+aysYVWjn7C32rGREwJtGgwyYlg==
+
+
+POST https://push-api.cloud.huawei.com/v3/736430079245800354/messages:send
+Authorization: Bearer DgEBAD/wDU/aG1/hXnelcNSsnFz8+aujXHjjjYLD2SDYpYU+5dDhAAiWjjOGFkSAYug8TT5k0rJ+aysYVWjn7C32rGREwJtGgwyYlg==
+Content-Type: application/json
+push-type: 0
+
+{
+  "validate_only": false,
+  "message": {
+    "notification": {
+      "title": "Hello",
+      "body": "This message came from my backend"
+    },
+    "android": {
+      "notification": {
+        "click_action": {
+          "type": 3
+        }
+      }
+    },
+    "token": [
+      "IQAAAACy0jV9AAB91E5Bw8SToh2YbTy4tyNSCTxCORHFeRnxbk1h9dwc7nxMf_XOJ1JQ_agWngj2qDagFBQuxjI3V9V86AoHqsmapf3WY-udNYisLA"
+    ]
+  }
+}
+
+
+
+POST https://push-api.cloud.huawei.com/v3/736430079245800354/messages:send
+Authorization: Bearer DgEBAD/wDU/aG1/hXnelcNSsnFz8+aujXHjjjYLD2SDYpYU+5dDhAAiWjjOGFkSAYug8TT5k0rJ+aysYVWjn7C32rGREwJtGgwyYlg==
+Content-Type: application/json
+push-type: 0
+
+{
+  "payload": {
+    "notification": {
+      "category": "MARKETING", // Set it to the actual notification message type.
+      "title": "Hello",
+      "body": "This message came from my backend",
+      "clickAction": {
+        "actionType": 0
+      } 
+    }
+  },
+  "target": {
+    "token": ["IQAAAACy0jV9AAB91E5Bw8SToh2YbTy4tyNSCTxCORHFeRnxbk1h9dwc7nxMf_XOJ1JQ_agWngj2qDagFBQuxjI3V9V86AoHqsmapf3WY-udNYisLA"]
+  }
+}

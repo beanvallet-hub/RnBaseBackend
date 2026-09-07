@@ -1,0 +1,32 @@
+
+# get all
+GET http://localhost:3000/task
+
+
+# get one
+GET http://localhost:3000/task/16
+
+
+# update
+PATCH http://localhost:3000/task/16 HTTP/1.1
+content-type: application/json
+
+{
+    "name": "task Adv",
+    "isCompleted": false,
+    "isFavorite": true
+}
+
+# create
+POST http://localhost:3000/task HTTP/1.1
+content-type: application/json
+
+{
+    "name": "task test create",
+    "isCompleted": true,
+    "isFavorite": false
+}
+
+
+# delete 
+DELETE http://localhost:3000/task/19 HTTP/1.1
